@@ -1,0 +1,6 @@
+<h1>Hacker News</h1>
+  <% @posts.each do |post|%>
+    <div>
+      <a target="blank" href="<%=post.url%>"><%= post.title %> <%=post.votes%></a>
+    </div>
+  <%end%>
