@@ -18,7 +18,8 @@ set :bind, '0.0.0.0'
 get '/' do
   # TODO
   # 1. fetch posts from database.
-  @posts = Post.all.order("votes DESC")
+  @posts = Post..by_most_popular.order("votes DESC")
+  # @posts = Post.all.order("votes DESC")
   # 2. Store these posts in an instance variable
   # 3. Use it in the `app/views/posts.erb` view
   erb :posts # Do not remove this line
